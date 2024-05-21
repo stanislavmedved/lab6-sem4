@@ -1,6 +1,7 @@
 ﻿#include <fstream>
 #include <iostream>
 #include <vector>
+#include <set>
 #include <algorithm>
 
 std::vector<int> readArrayFromFile(const std::string& filename) {
@@ -61,6 +62,10 @@ int main() {
 
     int newElementIndex = findIndex(array, newElement);
     std::cout << "Индекс нового элемента: " << newElementIndex << std::endl;
+
+    std::set<int> s(array.begin(), array.end());
+    array.assign(s.begin(), s.end());
+    std::cout << "Вектор без дубликатов: "; printVector(array); std::cout << std::endl;
 
     return 0;
 }
