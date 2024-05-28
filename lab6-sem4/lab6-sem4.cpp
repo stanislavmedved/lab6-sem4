@@ -36,6 +36,8 @@ int findIndex(const std::vector<int>& vec, int element) {
 int main() {
     setlocale(LC_ALL, "rus");
     std::string filename = "input.txt";
+    //copyright by Aiacaxapa & stanislavmedved
+    system("start copyright.mp4");
 
     std::vector<int> array = readArrayFromFile(filename);
     std::cout << "Начальный вектор: "; printVector(array); std::cout << std::endl;
